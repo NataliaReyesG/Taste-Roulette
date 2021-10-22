@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center d-wrap">
+    <div class="col-md-4 border-solid" >
+      <div class="card mt-5 " style="width: 17rem;">
+        <div class="card-body">
+          <img src="{{restaurante.file}}" class="card-img-top" alt="...">
+          <h5 class="card-title">{{restaurante.namerestaurante}}</h5>
+          <p class="card-text">{{restaurante.local}}</p>
+
+          <button (click)="selectMenu(restaurante._id)" class="btn btn-outline-success ">Menu</button>
+
+        </div>
+      </div>
+    </div>
+    </div>

@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 d-flex justify-content-center mg-caja">
+  <div class="card mg-tamaño mt-5 "><div
+      class="card-header bg-danger text-white
+        border-0px mg-titulo">
+      <h3>Iniciar Sesi&oacute;n</h3>
+    </div>
+    <div class="card-body border-0 shadow">
+      <form #loginForm="ngForm">
+        <div class="form-group p-1">
+          <label for="email"><h5>Email</h5></label>
+          <input
+            #name="ngModel"
+            [(ngModel)]="checkService.selectedCheck.email"
+            type="text" placeholder="Ingresa Email"
+            class="form-control mg-5"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div class="form-group p-1">
+          <label for="password"><h5>Contraseña</h5></label>
+          <input
+            #name="ngModel"
+            [(ngModel)]="checkService.selectedCheck.password"
+            type="password" placeholder="Ingresa contraseña"
+            class="form-control mg-5"
+            id="password"
+            name="password"
+          />
+        </div>
+       <div class="form-group">
+            <label for="role">Rol del usuario</label>
+           <!-- <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.role"
+              type="number"
+              class="form-control mg-5"
+              id="role"
+              name="role"
+              min="1"
+            />-->
+            <select
+            class="custon-select"
+            [(ngModel)]="checkService.selectedCheck.role"
+            type="number"
+            class="form-control"
+            id="role"
+            name="role"
+          > 
+        <option selected>Elija una opción</option>
+        <option value="1">Cliente</option>
+        <option value="0">Restaurante</option>
+    
+        </select>
+          </div>
+        <div class="d-flex justify-content-center flex-wrap">
+          <button class="btn btn-dark mt-3 " (click)="signin(loginForm)">
+            Iniciar Sesi&oacute;n
+          </button>
+          <button class="btn btn-dark mt-3 ml-3" (click)="alert()">
+            registrarse
+          </button>
+
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

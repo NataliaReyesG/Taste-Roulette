@@ -1,0 +1,119 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 d-flex justify-content-center mg-caja ">
+  <div class="card mg-tamaño mt-5 ">
+    <div class="card-header bg-danger text-white border-0 mg-titulo ">
+      Registro Cliente</div>
+    <div class="card-body border-0 shadow ">
+      <form #registerForm="ngForm">
+        <div class="form-group ">
+            <label for="name">Nombre</label>
+            <input 
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.name"
+              type="text " placeholder="Ingresa nombre"
+              class="form-control mg-5" 
+              id="name"
+              name="name"
+       
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Apellido</label>
+            <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.lastname"
+              type="text" placeholder="Ingresa apellido"
+              class="form-control mg-5"
+              id="lastname"
+              name="lastname"
+            
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.email"
+              type="text" placeholder="Ingresa Email"
+              class="form-control mg-5 "
+              id="email"
+              name="email"
+             
+            />
+          </div>
+          <div class="form-group">
+            <label for="adress">Dirección</label>
+            <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.adress"
+              type="text" placeholder="Ingresa Dirección"
+              class="form-control mg-5"
+              id="adress"
+              name="adress"
+             
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefono</label>
+            <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.phone"
+              type="text" placeholder="Ingresa Telefono"
+              class="form-control mg-5"
+              id="phone"
+              name="phone"
+             
+            />
+          </div>
+         <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input 
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.password"
+              type="password" placeholder="Ingresa Contraseña"
+              class="form-control mg-5"
+              id="password"
+              name="password"
+             
+            />
+           
+          </div>
+          <div class="form-group">
+            <label for="role">Rol del usuario</label>
+         <!-- <input
+              #name="ngModel"
+              [(ngModel)]="checkService.selectedCheck.role"
+              type="number" placeholder="Como deseas Ingresar"
+              class="form-control mg-5"
+              id="role"
+              name="role"
+              min="1" 
+              /> --> 
+
+              <select
+              class="custon-select"
+              [(ngModel)]="checkService.selectedCheck.role"
+              type="number"
+              class="form-control"
+              id="role"
+              name="role"
+            > 
+          <option selected>Elija una opción</option>
+          <option value="1">Cliente</option>
+          <option value="0">Restaurante</option>
+      
+          </select>
+
+            
+
+            
+          </div>
+          <div class="d-flex justify-content-center flex-wrap ">
+          <button class="btn btn-dark">
+          <a class="bg-boton" a href="./signin"(click)="signup(registerForm)">Registrarse</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

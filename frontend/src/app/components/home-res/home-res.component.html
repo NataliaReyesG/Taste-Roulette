@@ -1,0 +1,53 @@
+
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="./assets/logo.png" alt="Logo" width="40" height="40" />
+            Taste Roulette</a>
+            <!--boton burguer-->
+          <button
+            class="navbar-toggler "
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto"
+              *ngIf="!checkService.loggedIn(); else loggedIn"
+            >
+                <a class="nav-link" href="/signin">Iniciar Sesion</a>
+                <a class="nav-link" href="/signup">Registrarse</a>
+            </div>
+
+
+            <ng-template #loggedIn>
+              <div class="navbar-nav ml-auto">
+
+                <a class="nav-link" href="/home">Home</a>
+
+
+                <a class="nav-link"
+                style="cursor: pointer"
+                (click)="checkService.logout()"
+                >Cerrar Sesión</a >
+
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </nav>
+<app-carrusel></app-carrusel>
+<h1 class="d-flex justify-content-center mt-5">Restaurantes</h1>
+<div *ngIf="restaurantes.length" class="row">
+  <app-card-restaurante [restaurante]="restaurante" *ngFor="let restaurante of restaurantes"></app-card-restaurante>
+</div>
+<app-nosotros></app-nosotros>
+<app-programadores></app-programadores>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

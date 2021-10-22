@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="./assets/logo.png" alt="Logo" width="40" height="40" />
+      Taste Roulette</a>
+      <!--boton burguer-->
+    <button
+      class="navbar-toggler "
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto"
+        *ngIf="!checkService.loggedIn(); else loggedIn"
+      >
+          <a class="nav-link" href="/signin">Iniciar Sesion</a>
+          <a class="nav-link" href="/signup">Registrarse</a>
+      </div>
+
+
+      <ng-template #loggedIn>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link" href="/home-res">Restaurante</a>
+          <a class="nav-link" href="/home">Home</a>
+
+
+          <a class="nav-link"
+          style="cursor: pointer"
+          (click)="checkService.logout()"
+          >Cerrar Sesión</a >
+
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</nav>
+<div class="d-flex justify-content-center mt-5">
+  <button (click)="createMenu()" type="button" class="btn btn-outline-info">
+    Crear Menu
+  </button>
+</div>
+<div class="container">
+
+  <div *ngIf="menus.length" class="row">
+    <app-cards (menuSeleccionado)=agregarMenu($event) [menu]="menu" *ngFor="let menu of menus"></app-cards>
+
+  </div>
+  <div class=" d-flex justify-content-center mt-5">
+    <div  *ngIf="listaDeCompra.length" class="row" >
+      <button (click)="irAlCarrito()" type="button" class="btn btn-outline-info" >Ir a pagar</button>
+
+    </div>
+  </div>
+
+
+</div>
+<app-footer></app-footer>
+

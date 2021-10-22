@@ -1,0 +1,119 @@
+<app-navbar></app-navbar>
+
+<body class="bg-fondo">
+  <section class="formulario">
+    <div
+      class="
+        bg-imagen
+        p-5
+        d-flex
+        justify-content-center
+        transparente
+        form-container
+      "
+    >
+      <div class="col-md-5 bg-white p-5 rounded">
+        <div class="container">
+          <h1 class="text-left d-flex justify-content-center" style="color: #000000">Menú</h1>
+          <div class="row">
+            <div class="col-md-12">
+<form [formGroup]="form">
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">namerestaurante</label>
+    <input
+      formControlName="namerestaurante"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">nit</label>
+    <input
+      formControlName="nit"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">local</label>
+    <input
+      formControlName="local"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">adress</label>
+    <input
+      formControlName="adress"
+      type="number"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13" >
+    <label for="exampleInputEmail1">phone</label>
+    <input
+      formControlName="phone"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">email</label>
+    <input
+      formControlName="email"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">password</label>
+    <input
+      formControlName="password"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group col-md-13">
+    <label for="exampleInputEmail1">role</label>
+    <input
+      formControlName="role"
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="d-flex justify-content-center flex-wrap col md-3 ">
+  <button (click)="create()" type="submit" class="btn btn-primarycol md-3">
+    Crear
+  </button>
+  <button (click)="edit()" type="submit" class="btn btn-warning">editar
+
+  </button>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>
